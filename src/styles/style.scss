@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap");
+$primary_color: #0082ce;
+$secondary_color: #fcc426;
+$off_color: #ef95cd;
+$col_white: #fefefe;
+$col_blck: #383e4e;
+$col_gray: #bdbdbd;
+$col_success: #a3cb38;
+$col_danger: #eb2f06;
+$col_warning: #fed330;
+$col_focus: #fa8231;
+$col_info: #45aaf2;
+$size_h1: 96px;
+$size_h2: 60px;
+$size_h3: 48px;
+$size_h4: 32px;
+$size_h5: 24px;
+$size_h6: 20px;
+$lato: "Lato", sans-serif;
+$roboto: "Roboto", sans-serif;
+@import "mixins";
+@import "_header.scss";
+@import "_question_answers.scss";
+@import "~animate.css/animate.css";
+
+.center {
+  text-align: center;
+}
+.score_container{
+  position: absolute;
+  left:40%;
+  top:30%;
+  h2{
+    font-size: 36px;
+  }
+}
+@media (min-width: 600px){
+  
+  .score_container{
+    h2{
+      font-size: $size_h2;
+    }
+  }
+}
+@media (min-width:768px){
+  .score_container{
+    left: 40%;
+  }
+}
+@media (min-width: 1060){
+  .score_container{
+    left: 43%;
+  }
+
+}
+@media (min-width:1300px){
+  .score_container{
+    left:45%;
+  }
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: $lato;
+  color: $col_white;
+  @include custom_scrollbar;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $primary_color;
+  font-size: 1.6rem;
+  line-height: 3.8rem;
+  margin: 0;
+  @include container;
+  @include hfonts;
+  @include header1;
+  @include header2;
+  @include header3;
+  @include header4;
+  @include header5;
+  @include header6;
+  @include imgsize(100%);
+
+  .selectors {
+    z-index: 1;
+    .dropdowns {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      select {
+        flex: 0 0 calc(30% - 1rem);
+        outline: none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 2px solid $col_success;
+        background: transparent;
+        height: 4rem;
+        font-size: 2rem;
+        font-weight: bold;
+        color: $col_white;
+        @include custom_scrollbar;
+        option {
+          background: $primary_color;
+          border-bottom: 2px solid $col_success;
+          opacity: 0;
+          @include custom_scrollbar;
+        }
+      }
+    }
+    
+    .buttoner {
+      text-align: center;
+      margin-top: 10rem;
+      .button {
+        padding: 1rem;
+        background-color: $col_focus;
+        color: $col_white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 15px;
+        outline: none;
+        cursor: pointer;
+        transition: 300ms;
+        &:hover {
+          padding: 1.5rem;
+          border-radius: 20px;
+          background-color: $col_success;
+        }
+      }
+    }
+  }
+  .reloader {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    .button {
+      display: none;
+      padding: 1rem;
+      background-color: $col_focus;
+      color: $col_white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 15px;
+      outline: none;
+      cursor: pointer;
+      transition: 300ms;
+      &:hover {
+        padding: 1.5rem;
+        border-radius: 20px;
+        background-color: $col_warning;
+      }
+    }
+  }
+}
+
+
+
+
+

@@ -4,10 +4,12 @@ import './styles/style.scss'
 let score =0;
 let span_score = document.getElementById('score_number')
 span_score.innerHTML=score;
+
 const reloader = document.getElementById('reload');
 reloader.addEventListener('click',()=>{
     window.location.reload()
 })
+
 
 const submit = document.getElementById("submit_answers");
 submit.addEventListener('click', (e)=>{

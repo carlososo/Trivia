@@ -1,5 +1,8 @@
 .questions_answers {
-  @include container;
+  margin: 0 auto;
+  margin-top: -10rem;
+  max-width: 60%;
+  text-align: center;
   display: flex;
   flex-wrap: nowrap;
   overflow: hidden;
@@ -14,12 +17,14 @@
       @include container;
       .list_answers {
         padding: 0;
+        border-radius: 15px;
         li {
           list-style: none;
           text-align: center;
           background-color: $col_white;
           color: $col_blck;
           font-size: 2rem;
+          transition: cubic-bezier(0.075, 0.82, 0.165, 1), 400ms;
 
           &:hover {
             cursor: pointer;
